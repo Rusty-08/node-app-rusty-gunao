@@ -26,3 +26,15 @@ if(cmd[2] == 'add') {
     const present = require('./present')
     present(read())
 }
+if(cmd[2] === 'delete') {
+    
+    let id = cmd[3]
+
+    let oldNote = read()
+    const del = require('./del')
+
+    del(id, oldNote)
+
+    const present = require('./present')
+    present(read())
+}
